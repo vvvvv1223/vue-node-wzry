@@ -9,6 +9,7 @@ app.use('/uploads',express.static(__dirname + '/uploads'))
 require('./routes/admin/category')(app)
 require('./routes/admin/goods')(app)
 require('./routes/admin/hero')(app)
+require('./routes/admin/article')(app)
 
 require('./plugins/db')(app)
 

@@ -7,6 +7,8 @@ import GoodsList from '../views/Goods/GoodsList.vue'
 import GoodsEdit from '../views/Goods/GoodsEdit.vue'
 import HeroList from '../views/Hero/HeroList.vue'
 import HeroEdit from '../views/Hero/HeroEdit.vue'
+import ArticleList from '../views/Article/ArticleList.vue'
+import ArticleEdit from '../views/Article/ArticleEdit.vue'
 
 
 Vue.use(VueRouter)
@@ -27,9 +29,13 @@ Vue.use(VueRouter)
       { path:'/heros/list',component:HeroList},
       { path:'/heros/create',component:HeroEdit},
       { path:'/heros/edit/:id',component:HeroEdit,props:true },
+
+      { path:'/articles/list',component:ArticleList},
+      { path:'/articles/create',component:ArticleEdit},
+      { path:'/articles/edit/:id',component:ArticleEdit,props:true },
       {
         path:'/',
-        redirect:'/heros/list'
+        redirect:'/articles/list'
       }
     ]
   },
