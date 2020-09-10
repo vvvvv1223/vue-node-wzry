@@ -11,40 +11,42 @@ import ArticleList from '../views/Article/ArticleList.vue'
 import ArticleEdit from '../views/Article/ArticleEdit.vue'
 import AdminUserList from '../views/AdminUser/AdminUserList.vue'
 import AdminUserEdit from '../views/AdminUser/AdminUserEdit.vue'
+import Login from '../views/Login.vue'
 
 
 Vue.use(VueRouter)
 
   const routes = [
-  { path: '/',
-    name: 'Home',
-    component: Home,
-    children:[
-      { path:'/categories/list',component:CategoryList},
-      { path:'/categories/create',component:CategoryEdit},
-      { path:'/categories/edit/:id',component:CategoryEdit,props:true },
+    { path: '/login',name:'login',component: Login},
+    { path: '/',
+      name: 'Home',
+      component: Home,
+      children:[
+        { path:'/categories/list',component:CategoryList},
+        { path:'/categories/create',component:CategoryEdit},
+        { path:'/categories/edit/:id',component:CategoryEdit,props:true },
 
-      { path:'/goods/list',component:GoodsList},
-      { path:'/goods/create',component:GoodsEdit},
-      { path:'/goods/edit/:id',component:GoodsEdit,props:true },
+        { path:'/goods/list',component:GoodsList},
+        { path:'/goods/create',component:GoodsEdit},
+        { path:'/goods/edit/:id',component:GoodsEdit,props:true },
 
-      { path:'/heros/list',component:HeroList},
-      { path:'/heros/create',component:HeroEdit},
-      { path:'/heros/edit/:id',component:HeroEdit,props:true },
+        { path:'/heros/list',component:HeroList},
+        { path:'/heros/create',component:HeroEdit},
+        { path:'/heros/edit/:id',component:HeroEdit,props:true },
 
-      { path:'/articles/list',component:ArticleList},
-      { path:'/articles/create',component:ArticleEdit},
-      { path:'/articles/edit/:id',component:ArticleEdit,props:true },
+        { path:'/articles/list',component:ArticleList},
+        { path:'/articles/create',component:ArticleEdit},
+        { path:'/articles/edit/:id',component:ArticleEdit,props:true },
 
-      { path:'/admin_users/list',component:AdminUserList},
-      { path:'/admin_users/create',component:AdminUserEdit},
-      { path:'/admin_users/edit/:id',component:AdminUserEdit,props:true },
-      {
-        path:'/',
-        redirect:'/articles/list'
-      }
-    ]
-  },
+        { path:'/admin_users/list',component:AdminUserList},
+        { path:'/admin_users/create',component:AdminUserEdit},
+        { path:'/admin_users/edit/:id',component:AdminUserEdit,props:true },
+        {
+          path:'/',
+          redirect:'/articles/list'
+        }
+      ]
+  }
 
 ]
 
