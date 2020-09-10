@@ -10,6 +10,7 @@ require('./routes/admin/category')(app)
 require('./routes/admin/goods')(app)
 require('./routes/admin/hero')(app)
 require('./routes/admin/article')(app)
+require('./routes/admin/adminUser')(app)
 
 require('./plugins/db')(app)
 

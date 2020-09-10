@@ -30,9 +30,9 @@
           <el-submenu index="2">
             <template slot="title"><i class="el-icon-setting"></i>管理员相关</template>
             <el-menu-item-group>
-              <template slot="title">分组一</template>
-              <el-menu-item index="3-1">选项1</el-menu-item>
-              <el-menu-item index="3-2">选项2</el-menu-item>
+              <template slot="title">管理员</template>
+              <el-menu-item index="/admin_users/create">新建管理员</el-menu-item>
+              <el-menu-item index="/admin_users/list">管理员列表</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
         </el-menu>

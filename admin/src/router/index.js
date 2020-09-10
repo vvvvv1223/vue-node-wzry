@@ -9,6 +9,8 @@ import HeroList from '../views/Hero/HeroList.vue'
 import HeroEdit from '../views/Hero/HeroEdit.vue'
 import ArticleList from '../views/Article/ArticleList.vue'
 import ArticleEdit from '../views/Article/ArticleEdit.vue'
+import AdminUserList from '../views/AdminUser/AdminUserList.vue'
+import AdminUserEdit from '../views/AdminUser/AdminUserEdit.vue'
 
 
 Vue.use(VueRouter)
@@ -33,6 +35,10 @@ Vue.use(VueRouter)
       { path:'/articles/list',component:ArticleList},
       { path:'/articles/create',component:ArticleEdit},
       { path:'/articles/edit/:id',component:ArticleEdit,props:true },
+
+      { path:'/admin_users/list',component:AdminUserList},
+      { path:'/admin_users/create',component:AdminUserEdit},
+      { path:'/admin_users/edit/:id',component:AdminUserEdit,props:true },
       {
         path:'/',
         redirect:'/articles/list'
