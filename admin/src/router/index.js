@@ -43,7 +43,7 @@ Vue.use(VueRouter)
         { path:'/admin_users/edit/:id',component:AdminUserEdit,props:true },
         {
           path:'/',
-          redirect:'/articles/list'
+          redirect:'/heros/list'
         }
       ]
   }

@@ -27,6 +27,6 @@ module.exports = (app) => {
     const model = await Category.findByIdAndRemove(req.params.id,req.body)
     res.send(model);
   });
-
+  
   app.use("/api/admin", router);
 };

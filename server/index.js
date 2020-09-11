@@ -7,9 +7,11 @@ const AdminUser = require('./models/AdminUser')
 
 app.set('secret','ewfnehrfoiew93d3')
 
+
 app.use(require('cors')()) //注意顺序 先usecors 再require
 app.use(express.json())
 app.use('/uploads',express.static(__dirname + '/uploads'))
+app.use('/admin/',express.static(__dirname + '/admin'))
 
 // app.use('/',async(req,res,next) =>{
 //   const token = String(req.headers.authorization || '').split(' ').pop()
@@ -32,7 +34,7 @@ require('./plugins/db')(app)
 
   //图片上传
   const multer = require('multer');
-const adminUser = require('./routes/admin/adminUser');
+  const adminUser = require('./routes/admin/adminUser');
   const upload = multer({ dest:__dirname + '/uploads'})
   //upload.single()表示单个文件的上传 此处的file为network的formdata 名字可改(el的upload查看)
   app.post('/api/admin/upload',upload.single('file'),async(req,res) => {
@@ -40,6 +42,7 @@ const adminUser = require('./routes/admin/adminUser');
     file.url = `http://localhost:3000/uploads/${file.filename}`
     res.send(file)
   })
+
 
   //登录接口
   app.post('/api/admin/login',async(req,res) => {
