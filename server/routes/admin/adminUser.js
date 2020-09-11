@@ -3,7 +3,7 @@ module.exports = (app) => {
   const router = express.Router();
   const AdminUser = require("../../models/AdminUser");
 
-  router.get("/adminusers", async (req, res) => {
+  router.get("/adminusers",async (req, res) => {
     const items = await AdminUser.find().limit(10);
     res.send(items);
   });
