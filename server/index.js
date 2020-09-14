@@ -39,7 +39,7 @@ require('./plugins/db')(app)
   //upload.single()表示单个文件的上传 此处的file为network的formdata 名字可改(el的upload查看)
   app.post('/api/admin/upload',upload.single('file'),async(req,res) => {
     const file = req.file
-    file.url = `http://test.vvvvvli.com/uploads/${file.filename}`
+    file.url = `http://test.vvvvvlj.com/uploads/${file.filename}`
     res.send(file)
   })
 
